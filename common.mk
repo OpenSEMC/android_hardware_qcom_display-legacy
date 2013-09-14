@@ -30,6 +30,10 @@ ifeq ($(TARGET_NO_HW_VSYNC),true)
     common_flags += -DNO_HW_VSYNC
 endif
 
+ifeq ($(TARGET_BOARD_PLATFORM), msm8660)
+    common_flags += -DQCOM_BSP
+endif
+
 common_deps  :=
 kernel_includes :=
 
