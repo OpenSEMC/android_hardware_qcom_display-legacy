@@ -86,7 +86,9 @@ const char* const Res::barrierFile =
 namespace utils {
 //------------------ defines -----------------------------
 #define FB_DEVICE_TEMPLATE "/dev/graphics/fb%u"
+#ifndef NUM_FB_DEVICES
 #define NUM_FB_DEVICES 3
+#endif
 
 //--------------------------------------------------------
 FrameBufferInfo::FrameBufferInfo() {
